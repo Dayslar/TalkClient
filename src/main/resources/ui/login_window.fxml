@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.dayslar.sample.Controllers.LoginController">
+   <children>
+      <AnchorPane fx:id="content" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4,0.5, 0.0, 0.0); -fx-background-color: white" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <JFXSpinner fx:id="progress" layoutX="91.0" layoutY="38.0" radius="8.0" visible="false" AnchorPane.leftAnchor="96.0" AnchorPane.topAnchor="38.0" />
+            <Label text="Вход" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="32.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <BorderPane AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="96.0">
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Пароль" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="52.0" />
+                        <Label text="Логин" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="8.0" />
+                        <TextField fx:id="etName" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="24.0" />
+                        <PasswordField fx:id="etPassword" layoutX="32.0" layoutY="72.0" prefWidth="300.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0" />
+                        <JFXButton fx:id="btnLogin" buttonType="RAISED" defaultButton="true" layoutX="182.0" layoutY="174.0" onAction="#onClick" prefWidth="75.0" style="-fx-background-color: white;" text="Вход" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="85.0" />
+                        <JFXButton fx:id="btnCancel" buttonType="RAISED" cancelButton="true" layoutX="192.0" layoutY="184.0" onAction="#onClick" prefWidth="75.0" style="-fx-background-color: white;" text="Отмена" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

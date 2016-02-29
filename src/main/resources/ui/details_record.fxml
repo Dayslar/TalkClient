@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="444.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.dayslar.sample.Controllers.DetailRecordController">
+   <children>
+      <AnchorPane style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4,0.5, 0.0, 0.0); -fx-background-color: white" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <Label text="Подробная информация" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="32.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <JFXButton fx:id="btnBackRecords" layoutX="32.0" layoutY="38.0" onAction="#clickButton" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="36.0">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="/icons/back_to_records.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <VBox alignment="TOP_RIGHT" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="16.0">
+               <children>
+                  <Label fx:id="labelPlayerTime">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font></Label>
+                  <Slider fx:id="slider" blockIncrement="1.0" max="1000.0" value="1.0" />
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <JFXButton fx:id="btnBack" buttonType="FLAT" onAction="#clickButton">
+                           <HBox.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="/icons/back.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="32.0" width="32.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnPlay" onAction="#clickButton">
+                           <HBox.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="/icons/play.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="32.0" width="32.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnNext" onAction="#clickButton">
+                           <HBox.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="/icons/next.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="32.0" width="32.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="40.0" layoutY="97.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="96.0">
+               <children>
+                  <Label fx:id="labelManagerName" layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelManagerPhone" layoutY="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelPodr" layoutY="19.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelContactPhone" layoutY="89.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelContactName" layoutX="18.0" layoutY="69.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelType" layoutX="307.0" layoutY="108.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelDate" layoutX="289.0" layoutY="128.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<ToolBar maxHeight="28.0" minHeight="28.0" prefHeight="28.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 12,0.5, 0.0, 0.0);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.dayslar.sample.Controllers.ToolbarController">
+   <items>
+      <JFXButton fx:id="btnClose" alignment="CENTER" contentDisplay="CENTER" maxWidth="14.0" minWidth="14.0" onAction="#clickButton">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="/icons/close.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="12" width="12" />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnHide" maxWidth="14.0" minWidth="14.0" onAction="#clickButton">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="/icons/collapse.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="12.0" width="12.0" />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnFull" maxWidth="14.0" minWidth="14.0" onAction="#clickButton">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="/icons/expand.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="12.0" width="12.0" />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </items>
+</ToolBar>

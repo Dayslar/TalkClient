@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.dayslar.sample.Controllers.ReportWindowController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="500.0" prefWidth="700.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0.5, 0.0, 0.0); -fx-background-color: white;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <Label text="Мои отчеты" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="32.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <VBox layoutX="32.0" layoutY="128.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="16.0" />
+            <ComboBox fx:id="comboBox" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="92.0" />
+            <Label text="Период" textFill="#dd2d2d" underline="true" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="72.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="calendarNew" onAction="#clickCalendar" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="92.0" />
+            <Label text="По" AnchorPane.leftAnchor="224.0" AnchorPane.topAnchor="94.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="С" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="94.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="calendarOld" onAction="#clickCalendar" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="92.0" />
+            <Label layoutX="481.0" layoutY="78.0" text="Подразделения" textFill="#567c2e" underline="true" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="72.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Статистика" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="152.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="192.0">
+               <children>
+                  <VBox prefWidth="210.0">
+                     <children>
+                        <Label text="Все">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <BorderPane>
+                           <left>
+                              <Label text="Всего " BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelAllCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Отвечено" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelAnswerCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Не отвечено" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelNotAnswerCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Длительность" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelAllDuration" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets left="2.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefWidth="210.0">
+                     <children>
+                        <Label text="Входящие">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <BorderPane>
+                           <left>
+                              <Label text="Всего " BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelIncomingCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Отвечено" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelIncomingAnswerCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Не отвечено" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelIncomingNotAnswerCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Длительность" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelIncomingDuration" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets left="2.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefWidth="210.0">
+                     <children>
+                        <Label text="Исходящие">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <BorderPane>
+                           <left>
+                              <Label text="Всего " BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelOutgoingCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Отвечено" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelOutgoingAnswerCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Не отвечено" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelOutgoingNotAnswerCount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <BorderPane>
+                           <left>
+                              <Label text="Длительность" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </left>
+                           <right>
+                              <Label fx:id="labelOutgoingDuration" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets left="2.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

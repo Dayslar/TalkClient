@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.dayslar.sample.Controllers.GraphicWindowController">
+    <children>
+      <AnchorPane prefHeight="426.0" prefWidth="507.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0.5, 0.0, 0.0); -fx-background-color: white;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="16.0">
+         <children>
+              <Label text="Графики" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="32.0">
+                  <font>
+                      <Font name="System Bold" size="22.0" />
+                  </font>
+              </Label>
+            <DatePicker fx:id="calendarOld" layoutX="47.0" layoutY="92.0" onAction="#clickCalendar" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="92.0" />
+            <Label layoutX="18.0" layoutY="96.0" text="С" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="92.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="94.0" text="По" AnchorPane.topAnchor="92.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="calendarNew" layoutX="255.0" layoutY="92.0" onAction="#clickCalendar" AnchorPane.topAnchor="92.0" />
+            <Label layoutX="32.0" layoutY="75.0" text="Период" textFill="#dd2d2d" underline="true" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="72.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ComboBox fx:id="comboBox" layoutX="520.0" layoutY="90.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="92.0" />
+            <Label layoutX="625.0" layoutY="72.0" text="График" textFill="#567c2e" underline="true" AnchorPane.rightAnchor="16.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TabPane focusTraversable="false" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="124.0">
+              <tabs>
+                <Tab text="Линейная диаграмма">
+                     <content>
+                        <BarChart fx:id="barChart">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </content>
+                </Tab>
+                <Tab text="Временная диаграмма">
+                     <content>
+                        <AreaChart fx:id="areaChart">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                     </content>
+                </Tab>
+                  <Tab text="Круговая диаграмма">
+                     <content>
+                        <PieChart fx:id="pieChart" />
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
