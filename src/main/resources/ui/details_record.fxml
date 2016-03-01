@@ -20,14 +20,14 @@
                   <Insets bottom="4.0" left="4.0" right="4.0" />
                </padding>
             </Label>
-            <JFXButton fx:id="btnBackRecords" layoutX="32.0" layoutY="38.0" onAction="#clickButton" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="36.0">
+            <JFXButton fx:id="btnBackRecords" layoutX="32.0" layoutY="32.0" onAction="#clickButton" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="32.0">
                <graphic>
                   <ImageView>
                      <image>
                         <Image url="/icons/back_to_records.png" />
                      </image>
                      <viewport>
-                        <Rectangle2D height="16.0" width="16.0" />
+                        <Rectangle2D height="24.0" width="24.0" />
                      </viewport>
                   </ImageView>
                </graphic>

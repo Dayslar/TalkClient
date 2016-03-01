@@ -23,7 +23,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/ui/homes_window.fxml"));
 
-        Parent root  = loader.load();
+        Parent root  = (Parent) loader.load();
         HomeWindowController controller =  loader.getController();
         controller.setStage(primaryStage);
 
